@@ -13,32 +13,16 @@
 // Step 1 - Search ///////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////
 
-function search(animals, string){
-    for(var i = 0; i < animals.length; i++){
-        if(animals[i].length === string){
-            return animals[i];
+function search(arr, string){ //function takes an array of animals and a string representing their name
+    for (var i = 0; i < arr.length; i++){ //for loop iterates through the array positively 
+        if(arr[i].name === string){ //if statement that says if the current animals name matches the string representing their name
+            return arr[i]; //return the matching animals object 
 
         }
     
     }
 
-    return null;
-
-};
-
-var animals = {
-    name: "Ryan",
-    name: "Chris"
-};
-
-console.log(search(animals))
-
-//////////////////////////////////////////////////////////////////////
-// Step 2 - Replace //////////////////////////////////////////////////
-//////////////////////////////////////////////////////////////////////
-
-function replace(animals, name, replacement) {
-    
+    return null; //if not return null 
 
 };
 
