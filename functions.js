@@ -27,16 +27,69 @@ function search(arr, string){ //function takes an array of animals and a string 
 };
 
 
+
+//////////////////////////////////////////////////////////////////////
+// Step 2 - Replace ///////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////
+
+function replace(animals, name, replacement){
+
+    for(var i = 0; i < animals.length; i++){ //loop through animals array 
+        if(animals[i].name === name){ //if name in animals array equals the name string
+            return animals[i] = replacement //return animals object with replacement function
+
+
+        }
+
+    }
+
+
+};
+
 //////////////////////////////////////////////////////////////////////
 // Step 3 - Remove ///////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////
 
+function remove(animals, name){
 
+   for(var i = 0; i < animals.length; i++){ //for loop that inerates through animals array
+    if(animals[i].name === name){//if name in animals array equals the name string
+        animals.splice(i, 1); //remove the animal from the array using splice method
+        
+
+    };
+
+
+   }
+};
 
 //////////////////////////////////////////////////////////////////////
 // Step 4 - Add ///////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////
 
+function add(animals, animal){
+    if(!(animal.hasOwnProperty('name') && animal.name.length > 0)){
+        return;
+        //if statement checks if animal doesnt have a property called name and if the array is greater than zero
+    }
+
+    if(!(animal.hasOwnProperty('species') && animal.species.length > 0)){
+        return; // returns the function if both are true
+        //if statement checks if animal doesnt have a property called species and if the array is greater than zero
+
+    }
+
+    for(var i = 0; i < animals.length; i++){ //loop through animals array 
+        if(animals[i].name === animal.name){ //if name in animals array equals the name string
+            return;
+
+        }
+
+    }
+
+    animals.push(animal);
+    //adds the animal to the array if conditions are met
+};
 
 
 /**
